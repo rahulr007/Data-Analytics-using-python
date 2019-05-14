@@ -56,3 +56,4 @@ IMPORTING AND EXPORTING DATA: [USING PANDAS]
  df.replace(1,'one') - Would replace all values equal to 1 with 'one'.
  df.replace([1,3],['one','three']) - Would replace all 1 with 'one' and 3 with 'three'.[For Multiple values]
  df.rename(columns={'old_name': 'new_ name'}) - Rename specific columns.
+ 
