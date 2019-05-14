@@ -1,0 +1,58 @@
+DATA ANALYTICS - analyzing raw data in order to make conclusions about that information.
+
+There are many libraries in python for data analysing some important libraries are mentioned as followa: 
+
+IMPORTANT LIBRARIES:
+
+ Scientific computing libraries:
+  Pandas - Data structures and tools.
+  Numpy  - Arrays and matrices.
+  Scipy  - Integrals, solving differential equation, optimization.
+  
+ Visualisation libraries: 
+  Matplotlib - plots and graphs.
+  Seaborn - plots: heat maps, timeseries,violin plots.
+  
+ Algorithimic libraries: 
+  Scikit - ML,regression,classification,etc.
+  Statsmodels - explore data,estimate statistical model and perform statistical tests.
+  
+IMPORTING AND EXPORTING DATA: [USING PANDAS]
+ 
+ Consider 2 properties while importing and exporting the data. { FORMAT , FILE PATH }.
+ 
+ FORMAT - csv,json,sql,excel.
+ FILE PATH - local path in computer(where raw data stored in pc) or links like URL.
+ 
+ VIEWING AND INSPECTING DATA:
+ df.head(n)    - Returns the first n rows. 
+ df.tail(n)    - Returns the last n rows.
+ df.shape()    - Returns the number of rows and columns. 
+ df.info()     - Returns the index, datatype and memory information. 
+ df.describe() - Returns inputs summary statistics for numerical columns. 
+ df.mean()     - Returns the mean of all columns.
+ df.corr()     - Returns the correlation between columns in a data frame.
+ df.count()    - Returns the number of non-null values in each data frame column.
+ df.max()      - Returns the highest value in each column.
+ df.min()      - Returns the lowest value in each column.
+ df.median()   - Returns the median of each column.
+ df.std()      - Returns the standard deviation of each column.
+
+ JOIN/COMBINE:
+ df1.append(df2)                   - Add the rows in df1 to the end of df2 (columns should be identical).
+ df.concat([df1, df2],axis=1)      - Add the columns in df1 to the end of df2 (rows should be identical).
+ df1.join(df2,on=col1,how='inner') - SQL-style join the columns in df1 with the columns on df2 where 
+                                     the rows for colhave identical values. how can be equal to one of: 'left', 
+                                     'right', 'outer', 'inner'.
+ DATA CLEANING:
+ pd.isnull()         - Checks for null Values, and returns a boolean array (an array of true for missing values 
+                       and false for non-missing values). 
+ pd.isnull().sum()   - Returns the sum of null/missing values.
+ pd.notnull()        - Is the opposite of pd.isnull().
+ df.dropna()         - To drop the rows.
+ df.dropna(axis=1)   - To drop the columns.
+ df.fillna(x)        - Fills the missing values with x.
+ df.fillna(s.mean()) - To replace all null values with the mean.
+ df.replace(1,'one') - Would replace all values equal to 1 with 'one'.
+ df.replace([1,3],['one','three']) - Would replace all 1 with 'one' and 3 with 'three'.[For Multiple values]
+ df.rename(columns={'old_name': 'new_ name'}) - Rename specific columns.
