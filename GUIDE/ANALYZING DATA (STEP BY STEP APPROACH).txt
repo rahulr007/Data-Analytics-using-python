@@ -1,6 +1,14 @@
+HOW TO ANALYSE A DATA ?
+
 IMPORTING AND EXPORTING DATA: [USING PANDAS]
  
- Consider 2 properties while importing and exporting the data. { FORMAT , FILE PATH }.
+ Consider 2 properties while importing and exporting the data. [ FORMAT , FILE PATH ].
  
  FORMAT - csv,json,sql,excel.
  FILE PATH - local path in computer(where raw data stored in pc) or links like URL.
+
+     FORMAT         READ                SAVE    
+      csv        pd.read_csv()       df.to_csv()
+      json       pd.read_json()      df.to_json()
+      excel      pd.read_excel()     df.to_excel()
+      sql        pd.read_sql()       df.to_sql()
