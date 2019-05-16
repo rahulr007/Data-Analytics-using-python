@@ -1,14 +1,41 @@
-HOW TO ANALYSE A DATA ?
+                                         ANALYSE THE RAW DATA STEP-BY-STEP :
 
-IMPORTING AND EXPORTING DATA: [USING PANDAS]
+1. Understand the data before you begin the analysis.
+
+2. Import data using pandas. 
+
+IMPORTING AND EXPORTING DATA: 
  
  Consider 2 properties while importing and exporting the data. [ FORMAT , FILE PATH ].
  
- FORMAT - csv,json,sql,excel.
- FILE PATH - local path in computer(where raw data stored in pc) or links like URL.
+ * FORMAT - csv,json,sql,excel.
+ * FILE PATH - local path in computer(where raw data stored in pc) or links like URL.
 
      FORMAT         READ                SAVE    
       csv        pd.read_csv()       df.to_csv()
       json       pd.read_json()      df.to_json()
       excel      pd.read_excel()     df.to_excel()
       sql        pd.read_sql()       df.to_sql()
+      
+      
+3. Check DATATYPES of the data within the dataset. [ USE df.dtypes TO CHECK ] 
+    If there is the mismatch change needs to be done.
+
+4. Return the numerical statistics for the dataset. [ USE df.describe(include="all") TO CHECK ] 
+      WHY numerical statistics required ?
+        - To check data distribution to learn about the distribution of data in each column.
+        - The statistical metrics can tell if there are mathematical issues that may exist such as extreme outliers and large deviations.
+
+5. Deal with missing values in dataset [NaN - Not a Number].       
+     We have three options to do with missing value.
+        1.Leave it as such.
+        2.Replace the value.[With Average value or frequency of the data]
+        3.Drop the value.[Remove the value if necessary]
+        
+        TO DROP:
+        df.dropna() [ axis = 0 for entire rows
+                      axis = 1 for entire columns 
+                      inplace = "True" it changes dataset ] 
+       SYNTAX:               
+       df.dropna(subset=["column_name"],axis=0,inplace=True) -- Deletes entire row.
+       df.dropna(subset=["column_name"],axis=1,inplace=True) -- Deletes entire column.
